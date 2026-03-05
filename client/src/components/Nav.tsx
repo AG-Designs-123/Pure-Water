@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Droplet, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
@@ -11,22 +11,21 @@ export function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer" data-testid="nav-logo">
-              <img src="/images/logo.png" alt="Pure Water Window Cleaning" className="h-12" />
+            <div className="flex items-center gap-1 cursor-pointer" data-testid="nav-logo">
+              <span className="font-display font-bold text-2xl tracking-wider text-[#4a4a4a] uppercase">Pure</span>
+              <span className="font-display font-light text-2xl tracking-wider text-[#8a8a8a] uppercase">Water</span>
             </div>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-services">Services</a>
-            <a href="#enquiry" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-enquiry">Get Quote</a>
-            <a href="#payment" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-payment">Pay Bill</a>
+            <a href="#services" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-services">Services</a>
+            <a href="#enquiry" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-enquiry">Get Quote</a>
+            <a href="#payment" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-payment">Pay Bill</a>
             <Button asChild size="sm" className="rounded-full px-6 shadow-sm hover:shadow-md transition-all">
               <a href="#contact" data-testid="button-contact-nav">Contact Us</a>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -39,7 +38,6 @@ export function Nav() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-border animate-in slide-in-from-top-2">
           <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">

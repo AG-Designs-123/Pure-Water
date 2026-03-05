@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: 'Nunito', sans-serif;
+  --font-display: 'Oxanium', sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -49,37 +49,36 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  /* Clean, crisp colors */
-  --background: 210 20% 98%; /* Very light blue/gray */
-  --foreground: 220 40% 15%; /* Deep navy text */
+  --background: 0 0% 97%;
+  --foreground: 0 0% 18%;
 
   --card: 0 0% 100%;
-  --card-foreground: 220 40% 15%;
+  --card-foreground: 0 0% 18%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 220 40% 15%;
+  --popover-foreground: 0 0% 18%;
 
-  --primary: 195 90% 45%; /* Logo Cyan/Blue */
+  --primary: 0 0% 42%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 30% 90%;
-  --secondary-foreground: 220 40% 15%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 18%;
 
-  --muted: 210 20% 92%;
-  --muted-foreground: 215 20% 45%;
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 45%;
 
-  --accent: 210 90% 30%; /* Darker blue from logo text */
+  --accent: 0 0% 58%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 210 20% 88%;
-  --input: 210 20% 88%;
-  --ring: 195 90% 45%;
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
+  --ring: 0 0% 42%;
 
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Nunito', sans-serif;
+  --font-display: 'Oxanium', sans-serif;
   
   --radius: 0.75rem;
   
