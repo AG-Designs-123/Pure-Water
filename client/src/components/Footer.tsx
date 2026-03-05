@@ -39,7 +39,7 @@ export function Footer() {
             <h4 className="font-display font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-slate-400">
               <li>07551 017095</li>
-              <li>info@purewaterinfo.co.uk</li>
+              <li>pure.water@hotmail.co.uk</li>
               <li>www.purewaterinfo.co.uk</li>
             </ul>
           </div>

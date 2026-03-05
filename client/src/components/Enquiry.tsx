@@ -89,7 +89,7 @@ export function Enquiry() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground font-medium">Email Us</p>
-                  <p className="text-lg font-bold text-foreground" data-testid="text-email">info@purewaterinfo.co.uk</p>
+                  <p className="text-lg font-bold text-foreground" data-testid="text-email">pure.water@hotmail.co.uk</p>
                 </div>
               </div>
 
