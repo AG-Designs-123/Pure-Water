@@ -11,8 +11,9 @@ export function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/">
-            <div className="flex items-center cursor-pointer" data-testid="nav-logo">
-              <img src="/images/logo-header.png" alt="Pure Water Window Cleaning" className="h-10 md:h-12" />
+            <div className="flex items-center gap-1 cursor-pointer" data-testid="nav-logo">
+              <span className="font-display font-bold text-2xl tracking-wider text-[#4a4a4a] uppercase">Pure</span>
+              <span className="font-display font-light text-2xl tracking-wider text-[#8a8a8a] uppercase">Water</span>
             </div>
           </Link>
 

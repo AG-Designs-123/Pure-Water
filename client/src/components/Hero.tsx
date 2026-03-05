@@ -10,7 +10,7 @@ export function Hero() {
           muted 
           loop 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
         >
           <source src="/videos/hero-background.mp4" type="video/mp4" />
         </video>
@@ -18,11 +18,14 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <img 
-          src="/images/logo-light.png" 
-          alt="Pure Water - Professional Window Cleaning Service" 
-          className="w-full max-w-2xl mb-10 animate-in slide-in-from-bottom-8 duration-700"
-        />
+        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white/80 mb-10 animate-in slide-in-from-bottom-4 duration-500">
+          <span className="text-sm font-medium tracking-wider uppercase">Professional Window Cleaning Service</span>
+        </div>
+        
+        <h1 className="font-display font-bold text-white mb-6 tracking-[0.15em] uppercase max-w-5xl text-shadow-lg animate-in slide-in-from-bottom-8 duration-700">
+          <span className="block text-7xl md:text-[7rem] leading-none text-white">Pure</span>
+          <span className="block text-7xl md:text-[7rem] leading-none text-[#aaa] font-light">Water</span>
+        </h1>
         
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-12 font-light tracking-wide text-shadow animate-in slide-in-from-bottom-10 duration-1000">
           State-of-the-art pure water technology for streak-free windows, gutters, and solar panels that stay cleaner for longer.
