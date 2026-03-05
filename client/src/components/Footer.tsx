@@ -38,9 +38,9 @@ export function Footer() {
           <div>
             <h4 className="font-display font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-slate-400">
-              <li>0800 123 4567</li>
-              <li>hello@purewaterwindows.co.uk</li>
-              <li>123 Cleaning Street<br/>London, UK<br/>SW1A 1AA</li>
+              <li>07551 017095</li>
+              <li>info@purewaterinfo.co.uk</li>
+              <li>www.purewaterinfo.co.uk</li>
             </ul>
           </div>
         </div>
