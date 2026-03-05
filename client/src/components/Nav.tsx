@@ -12,12 +12,7 @@ export function Nav() {
         <div className="flex justify-between items-center h-20">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer" data-testid="nav-logo">
-              <div className="bg-primary/10 p-2 rounded-xl text-primary">
-                <Droplet className="w-6 h-6" />
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-foreground">
-                Pure Water
-              </span>
+              <img src="/images/logo.png" alt="Pure Water Window Cleaning" className="h-12" />
             </div>
           </Link>
 
