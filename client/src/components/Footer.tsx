@@ -6,9 +6,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-1 mb-6">
-              <span className="font-display font-bold text-3xl tracking-wider text-[#b0b0b0] uppercase">Pure</span>
-              <span className="font-display font-light text-3xl tracking-wider text-[#707070] uppercase">Water</span>
+            <div className="mb-6">
+              <img src="/images/logo-header-light.png" alt="Pure Water Window Cleaning" className="h-12" />
             </div>
             <p className="text-[#888] max-w-sm leading-relaxed mb-6">
               Professional window cleaning service using advanced pure water technology for streak-free, lasting results.
