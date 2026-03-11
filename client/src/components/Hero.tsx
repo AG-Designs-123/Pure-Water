@@ -51,7 +51,13 @@ export function Hero() {
         </div>
 
         <div className="hidden lg:flex justify-center items-end relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#c9a96e]/10 via-transparent to-transparent rounded-full blur-3xl opacity-30" />
+          <img 
+            src="/images/figure.png" 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-contain opacity-[0.06] pointer-events-none scale-110"
+            style={{ filter: "brightness(0) invert(1)" }}
+            aria-hidden="true"
+          />
           <img 
             src="/images/figure.png" 
             alt="Pure Water Window Cleaning" 
