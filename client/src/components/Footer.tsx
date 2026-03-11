@@ -38,7 +38,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-brand text-xs tracking-[0.2em] uppercase text-[#c9a96e] mb-6">Quick Links</h4>
+            <h4 className="font-display font-bold text-lg text-white/80 mb-6">Quick Links</h4>
             <ul className="space-y-4">
               <li><a href="#services" className="text-white/40 hover:text-white transition-colors text-sm">Services</a></li>
               <li><a href="#enquiry" className="text-white/40 hover:text-white transition-colors text-sm">Get a Quote</a></li>
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-brand text-xs tracking-[0.2em] uppercase text-[#c9a96e] mb-6">Contact</h4>
+            <h4 className="font-display font-bold text-lg text-white/80 mb-6">Contact</h4>
             <ul className="space-y-4 text-white/40 text-sm">
               <li>07551 017095</li>
               <li>pure.water@hotmail.co.uk</li>

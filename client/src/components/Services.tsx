@@ -64,7 +64,7 @@ export function Services() {
                 />
               </div>
               <CardContent className="p-8 bg-white">
-                <h4 className="text-xl font-display font-bold mb-3 text-foreground">{service.title}</h4>
+                <h4 className="text-2xl font-display font-bold mb-3 text-foreground">{service.title}</h4>
                 <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
                   {service.description}
                 </p>
