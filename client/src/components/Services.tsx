@@ -38,13 +38,12 @@ export function Services() {
       <img 
         src="/images/silhouette.jpg" 
         alt="" 
-        className="absolute right-0 bottom-0 h-[500px] object-contain opacity-[0.03] pointer-events-none translate-x-1/4 translate-y-1/6"
+        className="absolute inset-0 w-full h-full object-contain opacity-[0.04] pointer-events-none"
         aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <img src="/images/silhouette.jpg" alt="" className="h-16 mx-auto mb-6 opacity-20" aria-hidden="true" />
           <h2 className="text-sm font-display font-bold tracking-[0.2em] text-[#1a1a50] uppercase mb-3">Our Services</h2>
           <h3 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">Expert cleaning for your entire exterior</h3>
           <p className="text-lg text-muted-foreground">
