@@ -4,7 +4,7 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
+import { Phone, Mail, Globe, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 
@@ -58,81 +58,86 @@ export function Enquiry() {
   };
 
   return (
-    <section id="enquiry" className="py-24 bg-muted/50 relative overflow-hidden">
-      <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl opacity-50" />
-      <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 rounded-full bg-accent/10 blur-3xl opacity-50" />
+    <section id="enquiry" className="py-28 bg-[#f8f7f5] relative overflow-hidden">
+      <img 
+        src="/images/figure.png" 
+        alt="" 
+        className="absolute left-0 top-1/2 -translate-y-1/2 h-[80%] object-contain opacity-[0.03] pointer-events-none -translate-x-1/4"
+        aria-hidden="true"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           
           <div>
-            <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Get a Quote</h2>
-            <h3 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">Ready for a clearer view?</h3>
-            <p className="text-lg text-muted-foreground mb-10">
+            <p className="text-[#c9a96e] text-sm font-brand tracking-[0.3em] uppercase mb-4">Get in Touch</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">Request a Quotation</h2>
+            <div className="w-16 h-[1px] bg-[#c9a96e] mb-8" />
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
               Fill out the form to request a free, no-obligation quotation. We price every job individually based on your specific requirements.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <Phone className="w-6 h-6" />
+            <div className="space-y-5">
+              <div className="flex items-center gap-4 p-5 border border-border/50 bg-white">
+                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-[#c9a96e]" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Call Us</p>
-                  <p className="text-lg font-bold text-foreground" data-testid="text-phone">07551 017095</p>
+                  <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Call Us</p>
+                  <p className="text-base font-semibold text-foreground" data-testid="text-phone">07551 017095</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <Mail className="w-6 h-6" />
+              <div className="flex items-center gap-4 p-5 border border-border/50 bg-white">
+                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-[#c9a96e]" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Email Us</p>
-                  <p className="text-lg font-bold text-foreground" data-testid="text-email">pure.water@hotmail.co.uk</p>
+                  <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Email Us</p>
+                  <p className="text-base font-semibold text-foreground" data-testid="text-email">pure.water@hotmail.co.uk</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <MapPin className="w-6 h-6" />
+              <div className="flex items-center gap-4 p-5 border border-border/50 bg-white">
+                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center">
+                  <Globe className="w-5 h-5 text-[#c9a96e]" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Website</p>
-                  <p className="text-lg font-bold text-foreground" data-testid="text-website">www.purewaterinfo.co.uk</p>
+                  <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Website</p>
+                  <p className="text-base font-semibold text-foreground" data-testid="text-website">www.purewaterinfo.co.uk</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-border/50">
+          <div className="bg-white p-10 md:p-12 shadow-lg border border-border/30">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name</Label>
-                  <Input id="firstName" name="firstName" required className="bg-muted/30 border-muted" placeholder="John" data-testid="input-firstname" />
+                  <Label htmlFor="firstName" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">First Name</Label>
+                  <Input id="firstName" name="firstName" required className="rounded-none border-border h-12 focus:border-[#c9a96e] focus:ring-[#c9a96e]" placeholder="John" data-testid="input-firstname" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name</Label>
-                  <Input id="lastName" name="lastName" required className="bg-muted/30 border-muted" placeholder="Doe" data-testid="input-lastname" />
+                  <Label htmlFor="lastName" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">Last Name</Label>
+                  <Input id="lastName" name="lastName" required className="rounded-none border-border h-12" placeholder="Doe" data-testid="input-lastname" />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" required className="bg-muted/30 border-muted" placeholder="john@example.com" data-testid="input-email" />
+                  <Label htmlFor="email" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">Email</Label>
+                  <Input id="email" name="email" type="email" required className="rounded-none border-border h-12" placeholder="john@example.com" data-testid="input-email" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" name="phone" type="tel" required className="bg-muted/30 border-muted" placeholder="07123 456789" data-testid="input-phone" />
+                  <Label htmlFor="phone" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">Phone</Label>
+                  <Input id="phone" name="phone" type="tel" required className="rounded-none border-border h-12" placeholder="07123 456789" data-testid="input-phone" />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="service">Service Required</Label>
+                <Label htmlFor="service" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">Service Required</Label>
                 <Select value={service} onValueChange={setService}>
-                  <SelectTrigger id="service" className="bg-muted/30 border-muted" data-testid="select-service">
+                  <SelectTrigger id="service" className="rounded-none border-border h-12" data-testid="select-service">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -147,16 +152,16 @@ export function Enquiry() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="postcode">Postcode</Label>
-                <Input id="postcode" name="postcode" required className="bg-muted/30 border-muted" placeholder="AB12 3CD" data-testid="input-postcode" />
+                <Label htmlFor="postcode" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">Postcode</Label>
+                <Input id="postcode" name="postcode" required className="rounded-none border-border h-12" placeholder="AB12 3CD" data-testid="input-postcode" />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Property Details</Label>
+                <Label htmlFor="message" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">Property Details</Label>
                 <Textarea 
                   id="message" 
                   name="message"
-                  className="min-h-[120px] bg-muted/30 border-muted" 
+                  className="min-h-[120px] rounded-none border-border" 
                   placeholder="Tell us about your property (e.g. 4 bed detached house, easy access to rear...)"
                   data-testid="input-message"
                 />
@@ -165,7 +170,7 @@ export function Enquiry() {
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full text-base h-14 rounded-xl shadow-md hover:shadow-lg transition-all" 
+                className="w-full text-base h-14 rounded-none bg-[#c9a96e] text-[#0c1222] hover:bg-[#d4b87d] border-none tracking-wider uppercase font-brand shadow-none" 
                 data-testid="button-submit-quote"
                 disabled={mutation.isPending}
               >

@@ -4,7 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: 'Oxanium', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-brand: 'Oxanium', sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -49,36 +50,37 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 230 20% 97%;
-  --foreground: 240 50% 16%;
+  --background: 220 20% 97%;
+  --foreground: 230 35% 12%;
 
   --card: 0 0% 100%;
-  --card-foreground: 240 50% 16%;
+  --card-foreground: 230 35% 12%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 240 50% 16%;
+  --popover-foreground: 230 35% 12%;
 
-  --primary: 240 50% 20%;
-  --primary-foreground: 0 0% 100%;
+  --primary: 225 45% 18%;
+  --primary-foreground: 40 20% 95%;
 
-  --secondary: 230 20% 92%;
-  --secondary-foreground: 240 50% 16%;
+  --secondary: 220 15% 93%;
+  --secondary-foreground: 230 35% 12%;
 
-  --muted: 230 15% 94%;
-  --muted-foreground: 230 15% 45%;
+  --muted: 220 12% 94%;
+  --muted-foreground: 220 10% 48%;
 
-  --accent: 240 30% 55%;
+  --accent: 38 55% 55%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 230 15% 88%;
-  --input: 230 15% 88%;
-  --ring: 240 50% 20%;
+  --border: 220 15% 90%;
+  --input: 220 15% 90%;
+  --ring: 225 45% 18%;
 
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Oxanium', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-brand: 'Oxanium', sans-serif;
   
   --radius: 0.75rem;
   

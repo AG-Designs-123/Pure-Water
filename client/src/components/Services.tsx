@@ -4,14 +4,14 @@ import { CheckCircle2 } from "lucide-react";
 const services = [
   {
     id: "windows",
-    title: "Pure Water Window Cleaning",
+    title: "Window Cleaning",
     description: "Spotless, streak-free windows using advanced pure water pole systems reaching up to 6 stories safely from the ground.",
     features: ["Frames & sills included", "Lasts longer than traditional methods", "Eco-friendly, no harsh chemicals"],
     image: "/images/solar-cleaning.png"
   },
   {
     id: "gutters",
-    title: "Gutter Clearing & Cleaning",
+    title: "Gutter Clearing",
     description: "Prevent water damage to your property with our thorough gutter clearing service, removing moss, leaves, and debris.",
     features: ["High-reach vacuum system", "Before/after inspection", "Fascia & soffit washing available"],
     image: "/images/gutter-cleaning.png"
@@ -34,28 +34,29 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-background relative overflow-hidden">
+    <section id="services" className="py-28 bg-white relative overflow-hidden">
       <img 
-        src="/images/silhouette.jpg" 
+        src="/images/figure.png" 
         alt="" 
-        className="absolute inset-0 w-full h-full object-contain opacity-[0.04] pointer-events-none"
+        className="absolute right-0 top-1/2 -translate-y-1/2 h-full object-contain opacity-[0.03] pointer-events-none translate-x-1/3"
         aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-display font-bold tracking-[0.2em] text-[#1a1a50] uppercase mb-3">Our Services</h2>
-          <h3 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">Expert cleaning for your entire exterior</h3>
-          <p className="text-lg text-muted-foreground">
-            We provide a comprehensive range of professional exterior cleaning services for residential and commercial properties.
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <p className="text-[#c9a96e] text-sm font-brand tracking-[0.3em] uppercase mb-4">What We Do</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">Our Services</h2>
+          <div className="w-16 h-[1px] bg-[#c9a96e] mx-auto mb-6" />
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            A comprehensive range of professional exterior cleaning services for residential and commercial properties.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-10">
           {services.map((service) => (
-            <Card key={service.id} className="overflow-hidden border-none shadow-lg group hover:shadow-xl transition-all duration-300" data-testid={`service-card-${service.id}`}>
-              <div className="h-64 overflow-hidden relative">
-                <div className="absolute inset-0 bg-[#1a1a50]/20 mix-blend-multiply z-10" />
+            <Card key={service.id} className="overflow-hidden border border-border/50 shadow-none group hover:shadow-xl transition-all duration-500 rounded-none" data-testid={`service-card-${service.id}`}>
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#0c1222]/30 group-hover:bg-[#0c1222]/20 transition-all duration-500 z-10" />
                 <img 
                   src={service.image} 
                   alt={service.title} 
@@ -63,15 +64,15 @@ export function Services() {
                 />
               </div>
               <CardContent className="p-8 bg-white">
-                <h4 className="text-2xl font-display font-bold mb-3 text-[#1a1a50]">{service.title}</h4>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <h4 className="text-xl font-display font-bold mb-3 text-foreground">{service.title}</h4>
+                <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
                   {service.description}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-2.5">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#1a1a50] shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-foreground/80">{feature}</span>
+                      <CheckCircle2 className="w-4 h-4 text-[#c9a96e] shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground/70">{feature}</span>
                     </li>
                   ))}
                 </ul>
