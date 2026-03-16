@@ -7,7 +7,7 @@ const services = [
     title: "Window Cleaning",
     description: "Spotless, streak-free windows using advanced pure water pole systems reaching up to 6 stories safely from the ground.",
     features: ["Frames & sills included", "Lasts longer than traditional methods", "Eco-friendly, no harsh chemicals"],
-    image: "/images/solar-cleaning.png"
+    image: "/images/window-cleaning.png"
   },
   {
     id: "gutters",
