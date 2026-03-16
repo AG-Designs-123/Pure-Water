@@ -19,7 +19,7 @@ export function Nav() {
         <div className="flex justify-between items-center h-20">
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer" data-testid="nav-logo">
-              <img src="/images/figure.png" alt="" className="h-10 object-contain" style={{ filter: scrolled ? "none" : "brightness(0) invert(1)" }} />
+              <img src="/images/figure.png?v=2" alt="" className="h-10 object-contain" style={{ filter: scrolled ? "none" : "brightness(0) invert(1)" }} />
               <div className="flex items-baseline gap-1.5">
                 <span className={`font-brand font-bold text-lg tracking-[0.15em] uppercase transition-colors duration-500 ${scrolled ? "text-[#1a2340]" : "text-white"}`}>Pure</span>
                 <span className={`font-brand font-light text-lg tracking-[0.15em] uppercase transition-colors duration-500 ${scrolled ? "text-[#c9a96e]" : "text-[#c9a96e]"}`}>Water</span>

@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-[#0c1222] text-white pt-24 pb-10 relative overflow-hidden">
       <img 
-        src="/images/figure.png" 
+        src="/images/figure.png?v=2" 
         alt="" 
         className="absolute right-0 bottom-0 h-[70%] object-contain opacity-[0.03] pointer-events-none translate-x-1/4"
         style={{ filter: "brightness(0) invert(1)" }}
@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/images/figure.png" alt="" className="h-14 object-contain" style={{ filter: "brightness(0) invert(1) opacity(0.8)" }} />
+              <img src="/images/figure.png?v=2" alt="" className="h-14 object-contain" style={{ filter: "brightness(0) invert(1) opacity(0.8)" }} />
               <div className="flex items-baseline gap-1.5">
                 <span className="font-brand font-bold text-xl tracking-[0.15em] uppercase text-white">Pure</span>
                 <span className="font-brand font-light text-xl tracking-[0.15em] uppercase text-[#c9a96e]">Water</span>

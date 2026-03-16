@@ -36,7 +36,7 @@ export function Services() {
   return (
     <section id="services" className="py-28 bg-white relative overflow-hidden">
       <img 
-        src="/images/figure.png" 
+        src="/images/figure.png?v=2" 
         alt="" 
         className="absolute right-0 top-1/2 -translate-y-1/2 h-full object-contain opacity-[0.03] pointer-events-none translate-x-1/3"
         aria-hidden="true"

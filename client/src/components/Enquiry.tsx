@@ -60,7 +60,7 @@ export function Enquiry() {
   return (
     <section id="enquiry" className="py-28 bg-[#f8f7f5] relative overflow-hidden">
       <img 
-        src="/images/figure.png" 
+        src="/images/figure.png?v=2" 
         alt="" 
         className="absolute left-0 top-1/2 -translate-y-1/2 h-[80%] object-contain opacity-[0.03] pointer-events-none -translate-x-1/4"
         aria-hidden="true"

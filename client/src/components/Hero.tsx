@@ -53,7 +53,7 @@ export function Hero() {
         <div className="hidden lg:flex justify-center items-end relative">
           <div className="absolute inset-0 bg-gradient-to-t from-[#c9a96e]/10 via-transparent to-transparent rounded-full blur-3xl opacity-30" />
           <img 
-            src="/images/figure.png" 
+            src="/images/figure.png?v=2" 
             alt="Pure Water Window Cleaning" 
             className="h-[75vh] max-h-[700px] object-contain drop-shadow-[0_0_60px_rgba(201,169,110,0.15)] animate-in slide-in-from-bottom-16 duration-1000 relative z-10"
             style={{ filter: "brightness(0) invert(1) opacity(0.85)" }}
