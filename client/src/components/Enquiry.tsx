@@ -78,25 +78,25 @@ export function Enquiry() {
             </p>
 
             <div className="space-y-5">
-              <div className="flex items-center gap-4 p-5 border border-border/50 bg-white">
-                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-[#c9a96e]" />
+              <a href="tel:07551017095" className="flex items-center gap-4 p-5 border border-border/50 bg-white hover:border-[#c9a96e] hover:bg-[#faf9f7] transition-all duration-300 group" data-testid="link-call-us">
+                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center group-hover:bg-[#c9a96e] transition-colors duration-300">
+                  <Phone className="w-5 h-5 text-[#c9a96e] group-hover:text-[#0c1222] transition-colors duration-300" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Call Us</p>
-                  <a href="tel:07551017095" className="text-base font-semibold text-foreground hover:text-[#c9a96e] transition-colors" data-testid="text-phone">07551 017095</a>
+                  <p className="text-base font-semibold text-foreground group-hover:text-[#c9a96e] transition-colors" data-testid="text-phone">07551 017095</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4 p-5 border border-border/50 bg-white">
-                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-[#c9a96e]" />
+              <a href="mailto:pure.water@hotmail.co.uk?subject=Enquiry%20from%20website&body=Hello%2C%0A%0AI%20would%20like%20to%20enquire%20about%20your%20window%20cleaning%20services.%0A%0A" className="flex items-center gap-4 p-5 border border-border/50 bg-white hover:border-[#c9a96e] hover:bg-[#faf9f7] transition-all duration-300 group" data-testid="link-email-us">
+                <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center group-hover:bg-[#c9a96e] transition-colors duration-300">
+                  <Mail className="w-5 h-5 text-[#c9a96e] group-hover:text-[#0c1222] transition-colors duration-300" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Email Us</p>
-                  <a href="mailto:pure.water@hotmail.co.uk" className="text-base font-semibold text-foreground hover:text-[#c9a96e] transition-colors" data-testid="text-email">pure.water@hotmail.co.uk</a>
+                  <p className="text-base font-semibold text-foreground group-hover:text-[#c9a96e] transition-colors" data-testid="text-email">pure.water@hotmail.co.uk</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-center gap-4 p-5 border border-border/50 bg-white">
                 <div className="w-12 h-12 bg-[#0c1222] flex items-center justify-center">
