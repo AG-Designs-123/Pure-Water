@@ -84,7 +84,7 @@ export function Enquiry() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Call Us</p>
-                  <p className="text-base font-semibold text-foreground" data-testid="text-phone">07551 017095</p>
+                  <a href="tel:07551017095" className="text-base font-semibold text-foreground hover:text-[#c9a96e] transition-colors" data-testid="text-phone">07551 017095</a>
                 </div>
               </div>
               
@@ -94,7 +94,7 @@ export function Enquiry() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-brand tracking-wider uppercase">Email Us</p>
-                  <p className="text-base font-semibold text-foreground" data-testid="text-email">pure.water@hotmail.co.uk</p>
+                  <a href="mailto:pure.water@hotmail.co.uk" className="text-base font-semibold text-foreground hover:text-[#c9a96e] transition-colors" data-testid="text-email">pure.water@hotmail.co.uk</a>
                 </div>
               </div>
 

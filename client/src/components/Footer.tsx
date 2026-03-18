@@ -50,9 +50,9 @@ export function Footer() {
           <div>
             <h4 className="font-display font-bold text-lg text-white/80 mb-6">Contact</h4>
             <ul className="space-y-4 text-white/40 text-sm">
-              <li>07551 017095</li>
-              <li>pure.water@hotmail.co.uk</li>
-              <li>www.purewaterinfo.co.uk</li>
+              <li><a href="tel:07551017095" className="hover:text-white transition-colors">07551 017095</a></li>
+              <li><a href="mailto:pure.water@hotmail.co.uk" className="hover:text-white transition-colors">pure.water@hotmail.co.uk</a></li>
+              <li><a href="https://www.purewaterinfo.co.uk" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">www.purewaterinfo.co.uk</a></li>
             </ul>
           </div>
         </div>
