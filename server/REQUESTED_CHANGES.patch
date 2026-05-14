@@ -1,0 +1,623 @@
+--- a/client/index.html	2026-05-14 19:58:02.309065781 +0100
++++ b/client/index.html	2026-05-14 20:46:18.539249512 +0100
+@@ -4,17 +4,48 @@
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+ 
+-    <meta property="og:title" content="Pure Water Window Cleaning" />
+-    <meta property="og:description" content="Professional, reliable window and gutter cleaning services." />
++    <meta name="description" content="Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages." />
++    <link rel="canonical" href="https://www.purewaterinfo.co.uk/" />
++
++    <meta property="og:title" content="Pure Water Window Cleaning | Blandford Forum & Dorset" />
++    <meta property="og:description" content="Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages." />
+     <meta property="og:type" content="website" />
+-    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
++    <meta property="og:url" content="https://www.purewaterinfo.co.uk/" />
++    <meta property="og:image" content="https://www.purewaterinfo.co.uk/opengraph.jpg" />
+     <meta name="twitter:card" content="summary_large_image" />
+-    <meta name="twitter:site" content="@replit" />
+-    <meta name="twitter:title" content="Pure Water Window Cleaning" />
+-    <meta name="twitter:description" content="Professional, reliable window and gutter cleaning services." />
+-    <meta name="twitter:image" content="https://replit.com/public/images/opengraph.png" />
++    <meta name="twitter:title" content="Pure Water Window Cleaning | Blandford Forum & Dorset" />
++    <meta name="twitter:description" content="Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages." />
++    <meta name="twitter:image" content="https://www.purewaterinfo.co.uk/opengraph.jpg" />
++
++    <script type="application/ld+json">
++      {
++        "@context": "https://schema.org",
++        "@type": "LocalBusiness",
++        "name": "Pure Water Window Cleaning",
++        "url": "https://www.purewaterinfo.co.uk/",
++        "image": "https://www.purewaterinfo.co.uk/opengraph.jpg",
++        "telephone": "+447551017095",
++        "email": "pure.water@hotmail.co.uk",
++        "description": "Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages.",
++        "areaServed": [
++          { "@type": "Place", "name": "Blandford Forum" },
++          { "@type": "Place", "name": "Spetisbury" },
++          { "@type": "Place", "name": "Charlton Marshall" },
++          { "@type": "Place", "name": "Wimborne" },
++          { "@type": "AdministrativeArea", "name": "Dorset" }
++        ],
++        "priceRange": "££",
++        "makesOffer": [
++          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Window Cleaning" } },
++          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutter Clearing" } },
++          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Solar Panel Cleaning" } },
++          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conservatory Cleaning" } },
++          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fascia and Soffit Cleaning" } }
++        ]
++      }
++    </script>
+ 
+-    <title>Pure Water Window Cleaning</title>
++    <title>Pure Water Window Cleaning | Blandford Forum & Dorset</title>
+ 
+     <link rel="icon" type="image/png" href="/favicon.png" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/client/public/images/README.md	2026-05-14 20:46:40.433785396 +0100
+@@ -0,0 +1,12 @@
++# Website gallery images
++
++The images in this folder are legally usable example/public-domain imagery added for the results gallery.
++
++For best conversion, replace these with genuine Pure Water Window Cleaning before/after photos when available:
++
++- `before-after-window-cleaning.jpg` — replace with a real window-cleaning before/after image.
++- `solar-panel-cleaning-public-domain.jpg` — replace with a real solar-panel, conservatory, gutter, or exterior-cleaning image.
++
++Keep filenames the same to update the website without changing code, or update `client/src/components/ResultsGallery.tsx` if you use different filenames.
++
++Important: do not use images copied from competitors, Google Images, or social media unless you own them or have permission.
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/client/public/robots.txt	2026-05-14 20:46:24.041020310 +0100
+@@ -0,0 +1,4 @@
++User-agent: *
++Allow: /
++
++Sitemap: https://www.purewaterinfo.co.uk/sitemap.xml
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/client/public/sitemap.xml	2026-05-14 20:46:34.291829769 +0100
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url>
++    <loc>https://www.purewaterinfo.co.uk/</loc>
++    <changefreq>monthly</changefreq>
++    <priority>1.0</priority>
++  </url>
++  <url>
++    <loc>https://www.purewaterinfo.co.uk/privacy-policy</loc>
++    <changefreq>yearly</changefreq>
++    <priority>0.3</priority>
++  </url>
++  <url>
++    <loc>https://www.purewaterinfo.co.uk/terms-and-conditions</loc>
++    <changefreq>yearly</changefreq>
++    <priority>0.3</priority>
++  </url>
++  <url>
++    <loc>https://www.purewaterinfo.co.uk/cookie-policy</loc>
++    <changefreq>yearly</changefreq>
++    <priority>0.2</priority>
++  </url>
++  <url>
++    <loc>https://www.purewaterinfo.co.uk/refund-policy</loc>
++    <changefreq>yearly</changefreq>
++    <priority>0.2</priority>
++  </url>
++</urlset>
+
+--- a/client/src/App.tsx	2026-05-14 19:58:02.289450428 +0100
++++ b/client/src/App.tsx	2026-05-14 20:30:30.073924353 +0100
+@@ -4,12 +4,17 @@
+ import { Toaster } from "@/components/ui/toaster";
+ import { TooltipProvider } from "@/components/ui/tooltip";
+ import Home from "@/pages/Home";
++import LegalPage from "@/pages/LegalPage";
+ import NotFound from "@/pages/not-found";
+ 
+ function Router() {
+   return (
+     <Switch>
+       <Route path="/" component={Home} />
++      <Route path="/privacy-policy" component={() => <LegalPage type="privacy" />} />
++      <Route path="/terms-and-conditions" component={() => <LegalPage type="terms" />} />
++      <Route path="/cookie-policy" component={() => <LegalPage type="cookies" />} />
++      <Route path="/refund-policy" component={() => <LegalPage type="refunds" />} />
+       {/* Fallback to 404 */}
+       <Route component={NotFound} />
+     </Switch>
+
+--- a/client/src/components/Enquiry.tsx	2026-05-14 19:58:02.289450428 +0100
++++ b/client/src/components/Enquiry.tsx	2026-05-14 20:31:48.104654895 +0100
+@@ -4,13 +4,14 @@
+ import { Textarea } from "./ui/textarea";
+ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+ import { useToast } from "@/hooks/use-toast";
+-import { Phone, Mail, Globe, Loader2 } from "lucide-react";
++import { Phone, Mail, Globe, Loader2, CheckCircle } from "lucide-react";
+ import { useState } from "react";
+ import { useMutation } from "@tanstack/react-query";
+ 
+ export function Enquiry() {
+   const { toast } = useToast();
+   const [service, setService] = useState("windows");
++  const [submitted, setSubmitted] = useState(false);
+ 
+   const mutation = useMutation({
+     mutationFn: async (data: Record<string, string>) => {
+@@ -26,6 +27,7 @@
+       return res.json();
+     },
+     onSuccess: () => {
++      setSubmitted(true);
+       toast({
+         title: "Quote Request Sent!",
+         description: "We'll get back to you within 24 hours with your free quotation.",
+@@ -42,6 +44,7 @@
+ 
+   const handleSubmit = (e: React.FormEvent) => {
+     e.preventDefault();
++    setSubmitted(false);
+     const form = e.target as HTMLFormElement;
+     const formData = new FormData(form);
+     mutation.mutate({
+@@ -112,6 +115,15 @@
+ 
+           <div className="bg-white p-10 md:p-12 shadow-lg border border-border/30">
+             <form onSubmit={handleSubmit} className="space-y-6">
++              {submitted && (
++                <div className="flex items-start gap-3 border border-green-200 bg-green-50 p-4 text-green-900" role="status" aria-live="polite">
++                  <CheckCircle className="w-5 h-5 mt-0.5 text-green-700" />
++                  <div>
++                    <p className="font-semibold">Thanks — your quote request has been sent.</p>
++                    <p className="text-sm text-green-800/80 mt-1">We'll get back to you within 24 hours using the contact details provided.</p>
++                  </div>
++                </div>
++              )}
+               <div className="grid grid-cols-2 gap-6">
+                 <div className="space-y-2">
+                   <Label htmlFor="firstName" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">First Name</Label>
+@@ -183,6 +195,10 @@
+                   "Request Free Quote"
+                 )}
+               </Button>
++              <p className="text-xs text-muted-foreground leading-relaxed text-center">
++                We’ll only use your details to respond to your enquiry. See our{" "}
++                <a href="/privacy-policy" className="text-[#c9a96e] hover:underline">Privacy Policy</a>.
++              </p>
+             </form>
+           </div>
+ 
+
+--- a/client/src/components/Footer.tsx	2026-05-14 19:58:02.289450428 +0100
++++ b/client/src/components/Footer.tsx	2026-05-14 20:31:01.319807168 +0100
+@@ -1,5 +1,3 @@
+-import { Facebook, Instagram, Twitter } from "lucide-react";
+-
+ export function Footer() {
+   return (
+     <footer id="contact" className="bg-[#0c1222] text-white pt-24 pb-10 relative overflow-hidden">
+@@ -21,20 +19,12 @@
+                 <span className="font-brand font-light text-xl tracking-[0.15em] uppercase text-[#c9a96e]">Water</span>
+               </div>
+             </div>
+-            <p className="text-white/35 max-w-sm leading-relaxed mb-8">
+-              Professional window cleaning service using advanced pure water technology for streak-free, lasting results that protect and enhance your property.
++            <p className="text-white/35 max-w-sm leading-relaxed mb-4">
++              Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages.
++            </p>
++            <p className="text-[#c9a96e] text-sm font-brand tracking-wider uppercase">
++              Fully insured • Free no-obligation quotes
+             </p>
+-            <div className="flex gap-3">
+-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all text-white/60 hover:text-[#0c1222]">
+-                <Facebook className="w-4 h-4" />
+-              </a>
+-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all text-white/60 hover:text-[#0c1222]">
+-                <Instagram className="w-4 h-4" />
+-              </a>
+-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all text-white/60 hover:text-[#0c1222]">
+-                <Twitter className="w-4 h-4" />
+-              </a>
+-            </div>
+           </div>
+ 
+           <div>
+@@ -43,7 +33,10 @@
+               <li><a href="#services" className="text-white/40 hover:text-white transition-colors text-sm">Services</a></li>
+               <li><a href="#enquiry" className="text-white/40 hover:text-white transition-colors text-sm">Get a Quote</a></li>
+               <li><a href="#payment" className="text-white/40 hover:text-white transition-colors text-sm">Pay Bill Online</a></li>
+-              <li><a href="#" className="text-white/40 hover:text-white transition-colors text-sm">Terms & Conditions</a></li>
++              <li><a href="/terms-and-conditions" className="text-white/40 hover:text-white transition-colors text-sm">Terms & Conditions</a></li>
++              <li><a href="/privacy-policy" className="text-white/40 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
++              <li><a href="/cookie-policy" className="text-white/40 hover:text-white transition-colors text-sm">Cookie Policy</a></li>
++              <li><a href="/refund-policy" className="text-white/40 hover:text-white transition-colors text-sm">Refund Policy</a></li>
+             </ul>
+           </div>
+ 
+
+--- a/client/src/components/Hero.tsx	2026-05-14 19:58:02.289450428 +0100
++++ b/client/src/components/Hero.tsx	2026-05-14 19:57:06.717175543 +0100
+@@ -32,7 +32,7 @@
+           <div className="w-20 h-[1px] bg-gradient-to-r from-[#c9a96e] to-transparent my-8 animate-in slide-in-from-left-12 duration-1000" />
+           
+           <p className="text-lg text-white/50 max-w-md mb-10 leading-relaxed animate-in slide-in-from-left-12 duration-1000">
+-            State-of-the-art pure water technology delivering streak-free, crystal-clear results for discerning property owners.
++            Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages.
+           </p>
+           
+           <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-left-14 duration-1000 delay-150">
+
+--- a/client/src/components/Payment.tsx	2026-05-14 19:58:02.289450428 +0100
++++ b/client/src/components/Payment.tsx	2026-05-14 20:32:10.642028065 +0100
+@@ -129,7 +129,7 @@
+               <CreditCard className="w-6 h-6 text-[#c9a96e] shrink-0" />
+               <div>
+                 <p className="text-sm font-semibold text-foreground mb-0.5">Secure Card Payment via Stripe</p>
+-                <p className="text-xs text-muted-foreground">You'll be taken to Stripe's secure checkout page to enter your card details. We never store your card information.</p>
++                <p className="text-xs text-muted-foreground">You'll be taken to Stripe's secure checkout page to enter your card details. We never store your card information. Please check your invoice reference and amount before continuing.</p>
+               </div>
+             </div>
+ 
+@@ -157,6 +157,11 @@
+               <Lock className="w-3 h-3" />
+               Payments are processed securely by Stripe with 256-bit encryption.
+             </p>
++            <p className="text-xs text-center text-muted-foreground leading-relaxed">
++              By paying online, you confirm the invoice details are correct and agree to the{" "}
++              <a href="/terms-and-conditions" className="text-[#c9a96e] hover:underline">Terms & Conditions</a>{" "}
++              and <a href="/refund-policy" className="text-[#c9a96e] hover:underline">Refund Policy</a>.
++            </p>
+           </form>
+         </div>
+       </div>
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/client/src/components/ResultsGallery.tsx	2026-05-14 20:29:27.167976972 +0100
+@@ -0,0 +1,60 @@
++const results = [
++  {
++    title: "Window Cleaning Results",
++    image: "/images/before-after-window-cleaning.jpg",
++    alt: "Before and after example showing a visibly cleaner window after professional cleaning",
++    label: "Before & After Example",
++    text: "A clear visual example of the difference professional window cleaning can make.",
++    credit: "Public domain image via Wikimedia Commons.",
++  },
++  {
++    title: "Solar Panel Cleaning",
++    image: "/images/solar-panel-cleaning-public-domain.jpg",
++    alt: "Solar panels being professionally cleaned",
++    label: "Cleaning in Progress",
++    text: "Keeping panels clean helps reduce dirt build-up and supports better performance.",
++    credit: "Public domain image via Wikimedia Commons.",
++  },
++];
++
++export function ResultsGallery() {
++  return (
++    <section className="py-28 bg-white" aria-labelledby="results-heading">
++      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
++        <div className="max-w-2xl mb-14">
++          <p className="text-[#c9a96e] text-sm font-brand tracking-[0.3em] uppercase mb-4">See the Difference</p>
++          <h2 id="results-heading" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
++            Cleaner glass, brighter results
++          </h2>
++          <div className="w-16 h-[1px] bg-[#c9a96e] mb-8" />
++          <p className="text-lg text-muted-foreground leading-relaxed">
++            Example before-and-after style imagery showing the kind of visual improvement customers can expect from professional exterior cleaning.
++          </p>
++        </div>
++
++        <div className="grid md:grid-cols-2 gap-8">
++          {results.map((item) => (
++            <article key={item.title} className="group bg-[#f8f7f5] border border-border/50 overflow-hidden">
++              <div className="relative aspect-[16/10] overflow-hidden bg-[#0c1222]">
++                <img
++                  src={item.image}
++                  alt={item.alt}
++                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
++                  loading="lazy"
++                />
++                <div className="absolute left-5 top-5 bg-[#c9a96e] text-[#0c1222] px-4 py-2 text-xs font-brand uppercase tracking-wider">
++                  {item.label}
++                </div>
++              </div>
++              <div className="p-8">
++                <h3 className="text-2xl font-display font-bold text-foreground mb-3">{item.title}</h3>
++                <p className="text-muted-foreground leading-relaxed mb-4">{item.text}</p>
++                <p className="text-xs text-muted-foreground/70">{item.credit}</p>
++              </div>
++            </article>
++          ))}
++        </div>
++      </div>
++    </section>
++  );
++}
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/client/src/components/TrustBar.tsx	2026-05-14 20:29:08.985287552 +0100
+@@ -0,0 +1,49 @@
++import { BadgeCheck, Home, ShieldCheck, Sparkles } from "lucide-react";
++
++const trustItems = [
++  {
++    icon: ShieldCheck,
++    title: "Fully Insured",
++    text: "Professional service with care for your home and property.",
++  },
++  {
++    icon: BadgeCheck,
++    title: "Free Quotes",
++    text: "No-obligation quotations tailored to your property.",
++  },
++  {
++    icon: Home,
++    title: "Local Dorset Service",
++    text: "Covering Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and nearby villages.",
++  },
++  {
++    icon: Sparkles,
++    title: "Streak-Free Results",
++    text: "Pure water technology for frames, sills, glass and exterior surfaces.",
++  },
++];
++
++export function TrustBar() {
++  return (
++    <section className="bg-white border-y border-border/50" aria-label="Why choose Pure Water Window Cleaning">
++      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
++        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
++          {trustItems.map((item) => {
++            const Icon = item.icon;
++            return (
++              <div key={item.title} className="flex gap-4 items-start">
++                <div className="w-11 h-11 shrink-0 bg-[#0c1222] flex items-center justify-center">
++                  <Icon className="w-5 h-5 text-[#c9a96e]" />
++                </div>
++                <div>
++                  <h3 className="font-display font-bold text-lg text-[#0c1222]">{item.title}</h3>
++                  <p className="text-sm text-muted-foreground leading-relaxed mt-1">{item.text}</p>
++                </div>
++              </div>
++            );
++          })}
++        </div>
++      </div>
++    </section>
++  );
++}
+
+--- a/client/src/pages/Home.tsx	2026-05-14 19:58:02.289450428 +0100
++++ b/client/src/pages/Home.tsx	2026-05-14 20:30:08.284002473 +0100
+@@ -1,6 +1,8 @@
+ import { Nav } from "@/components/Nav";
+ import { Hero } from "@/components/Hero";
+ import { Services } from "@/components/Services";
++import { TrustBar } from "@/components/TrustBar";
++import { ResultsGallery } from "@/components/ResultsGallery";
+ import { Enquiry } from "@/components/Enquiry";
+ import { Payment } from "@/components/Payment";
+ import { Footer } from "@/components/Footer";
+@@ -10,7 +12,9 @@
+     <main className="min-h-screen">
+       <Nav />
+       <Hero />
++      <TrustBar />
+       <Services />
++      <ResultsGallery />
+       <Enquiry />
+       <Payment />
+       <Footer />
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/client/src/pages/LegalPage.tsx	2026-05-14 20:29:56.388859458 +0100
+@@ -0,0 +1,84 @@
++import { Link } from "wouter";
++
++interface LegalPageProps {
++  type: "privacy" | "terms" | "cookies" | "refunds";
++}
++
++const pages = {
++  privacy: {
++    title: "Privacy Policy",
++    intro: "This page explains how Pure Water Window Cleaning handles enquiry and payment information submitted through this website.",
++    sections: [
++      ["Information we collect", "When you request a quote, we collect the details you provide, such as your name, email address, phone number, postcode, selected service and property details."],
++      ["How we use your information", "We use your details to respond to your enquiry, provide quotations, arrange services, manage customer communication and maintain business records."],
++      ["Enquiry emails", "Quote requests are sent to pure.water@hotmail.co.uk and may also be stored securely in the website database for follow-up."],
++      ["Payments", "Online payments are processed securely by Stripe. Pure Water Window Cleaning does not store your card details."],
++      ["Sharing information", "We do not sell your personal information. Information is only shared where needed to operate the website, process payments, comply with law or deliver our service."],
++      ["Contact", "For privacy questions or to request removal of your enquiry details, contact pure.water@hotmail.co.uk or call 07551 017095."],
++    ],
++  },
++  terms: {
++    title: "Terms & Conditions",
++    intro: "These terms set out the general basis on which Pure Water Window Cleaning provides quotations, exterior cleaning services and online payment facilities.",
++    sections: [
++      ["Quotations", "Quotations are provided based on the information supplied and may be adjusted if property access, condition, size or requirements differ from the original enquiry."],
++      ["Access and safety", "Customers should ensure safe and reasonable access to the areas to be cleaned. Work may be rearranged where weather, access or safety conditions make service unsuitable."],
++      ["Service scope", "Services may include window cleaning, gutter clearing, solar panel cleaning, fascia and soffit cleaning, and conservatory valets as agreed in the quotation."],
++      ["Payment", "Payment is due as agreed on the invoice or quotation. Online payments are processed securely by Stripe."],
++      ["Cancellations", "If you need to rearrange a booking, please contact us as soon as possible on 07551 017095."],
++      ["Contact", "Questions about these terms can be sent to pure.water@hotmail.co.uk."],
++    ],
++  },
++  cookies: {
++    title: "Cookie Policy",
++    intro: "This website may use essential cookies or similar technologies to operate forms, security, payments and basic website functionality.",
++    sections: [
++      ["Essential cookies", "Essential cookies may be used to make the website work correctly, support forms, maintain security and enable payment redirects."],
++      ["Third-party services", "Stripe may use cookies or similar technologies when you use secure checkout. Please refer to Stripe's policies for details about payment processing."],
++      ["Managing cookies", "You can control or block cookies through your browser settings. Blocking essential cookies may affect website functionality."],
++      ["Contact", "For cookie questions, contact pure.water@hotmail.co.uk."],
++    ],
++  },
++  refunds: {
++    title: "Refund & Cancellation Policy",
++    intro: "This page explains the general approach to cancellations, payment issues and refunds for Pure Water Window Cleaning services.",
++    sections: [
++      ["Cancellations", "If you need to cancel or rearrange a booking, please contact us as soon as possible by phone or email."],
++      ["Refunds", "Refunds are reviewed on a case-by-case basis depending on the service, timing, payment status and circumstances."],
++      ["Payment issues", "If you believe you have paid the wrong invoice, entered the wrong amount or have a payment query, contact us promptly on 07551 017095 or pure.water@hotmail.co.uk."],
++      ["Stripe payments", "Card payments are processed securely by Stripe. Refunds, where agreed, may be returned through the original payment method."],
++    ],
++  },
++};
++
++export default function LegalPage({ type }: LegalPageProps) {
++  const page = pages[type];
++
++  return (
++    <main className="min-h-screen bg-[#f8f7f5] text-foreground">
++      <section className="bg-[#0c1222] text-white py-24">
++        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
++          <Link href="/" className="text-[#c9a96e] text-sm font-brand tracking-wider uppercase hover:text-white transition-colors">
++            ← Back to home
++          </Link>
++          <h1 className="text-4xl md:text-6xl font-display font-bold mt-8 mb-6">{page.title}</h1>
++          <p className="text-white/60 text-lg leading-relaxed max-w-2xl">{page.intro}</p>
++        </div>
++      </section>
++
++      <section className="py-16">
++        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white border border-border/50 p-8 md:p-12">
++          <p className="text-sm text-muted-foreground mb-10">Last updated: {new Date().getFullYear()}</p>
++          <div className="space-y-10">
++            {page.sections.map(([heading, body]) => (
++              <section key={heading}>
++                <h2 className="text-2xl font-display font-bold mb-3">{heading}</h2>
++                <p className="text-muted-foreground leading-relaxed">{body}</p>
++              </section>
++            ))}
++          </div>
++        </div>
++      </section>
++    </main>
++  );
++}
+
+--- /dev/null	2026-05-13 23:11:37.408548512 +0100
++++ b/script/build.ts	2026-05-14 20:35:48.610725145 +0100
+@@ -0,0 +1,24 @@
++import { build as esbuild } from "esbuild";
++import { execFileSync } from "node:child_process";
++import { rmSync } from "node:fs";
++import path from "node:path";
++
++const root = path.resolve(import.meta.dirname, "..");
++const dist = path.join(root, "dist");
++
++rmSync(dist, { recursive: true, force: true });
++
++execFileSync("npx", ["vite", "build"], {
++  cwd: root,
++  stdio: "inherit",
++});
++
++await esbuild({
++  entryPoints: [path.join(root, "server/index.ts")],
++  bundle: true,
++  platform: "node",
++  target: "node20",
++  format: "cjs",
++  outfile: path.join(dist, "index.cjs"),
++  packages: "external",
++});
+
+--- a/server/index.ts	2026-05-14 19:58:02.312988850 +0100
++++ b/server/index.ts	2026-05-14 20:34:44.843012282 +0100
+@@ -9,6 +9,21 @@
+ const app = express();
+ const httpServer = createServer(app);
+ 
++const PRIMARY_DOMAIN = "www.purewaterinfo.co.uk";
++
++app.use((req, res, next) => {
++  if (process.env.NODE_ENV !== "production") {
++    return next();
++  }
++
++  const host = req.headers.host?.split(":")[0];
++  if (host && host.endsWith(".replit.app")) {
++    return res.redirect(301, `https://${PRIMARY_DOMAIN}${req.originalUrl}`);
++  }
++
++  next();
++});
++
+ declare module "http" {
+   interface IncomingMessage {
+     rawBody: unknown;
+@@ -90,7 +105,7 @@
+   }
+   try {
+     log("Initialising Stripe schema...", "stripe");
+-    await runMigrations({ databaseUrl, schema: "stripe" });
++    await runMigrations({ databaseUrl });
+     log("Stripe schema ready", "stripe");
+ 
+     const stripeSync = await getStripeSync();
+
+--- a/server/routes.ts	2026-05-14 19:58:02.312988850 +0100
++++ b/server/routes.ts	2026-05-14 20:33:57.677017271 +0100
+@@ -44,6 +44,8 @@
+     gutters: "Gutter Clearing",
+     solar: "Solar Panel Cleaning",
+     conservatory: "Conservatory Cleaning",
++    fascia: "Fascia & Soffit Cleaning",
++    multiple: "Multiple Services",
+   };
+ 
+   const serviceLabel = serviceLabels[enquiry.service] || enquiry.service;
+@@ -110,7 +112,10 @@
+     const enquiry = await storage.createEnquiry(parsed.data);
+ 
+     // Send email notification (non-blocking — don't fail if email fails)
+-    sendEnquiryEmail(parsed.data).catch((err) => {
++    sendEnquiryEmail({
++      ...parsed.data,
++      message: parsed.data.message || "",
++    }).catch((err) => {
+       console.error("Failed to send enquiry email:", err.message);
+     });
+ 
+
+--- a/vite.config.ts	2026-05-14 19:58:02.312988850 +0100
++++ b/vite.config.ts	2026-05-14 20:33:39.861733326 +0100
+@@ -3,25 +3,12 @@
+ import tailwindcss from "@tailwindcss/vite";
+ import path from "path";
+ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+-import { metaImagesPlugin } from "./vite-plugin-meta-images";
+ 
+ export default defineConfig({
+   plugins: [
+     react(),
+     runtimeErrorOverlay(),
+     tailwindcss(),
+-    metaImagesPlugin(),
+-    ...(process.env.NODE_ENV !== "production" &&
+-    process.env.REPL_ID !== undefined
+-      ? [
+-          await import("@replit/vite-plugin-cartographer").then((m) =>
+-            m.cartographer(),
+-          ),
+-          await import("@replit/vite-plugin-dev-banner").then((m) =>
+-            m.devBanner(),
+-          ),
+-        ]
+-      : []),
+   ],
+   resolve: {
+     alias: {
