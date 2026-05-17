@@ -32,7 +32,7 @@ export function Hero() {
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#c9a96e] to-transparent my-8 animate-in slide-in-from-left-12 duration-1000" />
           
           <p className="text-lg text-white/50 max-w-md mb-10 leading-relaxed animate-in slide-in-from-left-12 duration-1000">
-            State-of-the-art pure water technology delivering streak-free, crystal-clear results for discerning property owners.
+            Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-left-14 duration-1000 delay-150">

@@ -4,13 +4,14 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, Globe, Loader2 } from "lucide-react";
+import { Phone, Mail, Globe, Loader2, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 
 export function Enquiry() {
   const { toast } = useToast();
   const [service, setService] = useState("windows");
+  const [submitted, setSubmitted] = useState(false);
 
   const mutation = useMutation({
     mutationFn: async (data: Record<string, string>) => {
@@ -26,6 +27,7 @@ export function Enquiry() {
       return res.json();
     },
     onSuccess: () => {
+      setSubmitted(true);
       toast({
         title: "Quote Request Sent!",
         description: "We'll get back to you within 24 hours with your free quotation.",
@@ -42,6 +44,7 @@ export function Enquiry() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitted(false);
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     mutation.mutate({
@@ -112,6 +115,15 @@ export function Enquiry() {
 
           <div className="bg-white p-10 md:p-12 shadow-lg border border-border/30">
             <form onSubmit={handleSubmit} className="space-y-6">
+              {submitted && (
+                <div className="flex items-start gap-3 border border-green-200 bg-green-50 p-4 text-green-900" role="status" aria-live="polite">
+                  <CheckCircle className="w-5 h-5 mt-0.5 text-green-700" />
+                  <div>
+                    <p className="font-semibold">Thanks — your quote request has been sent.</p>
+                    <p className="text-sm text-green-800/80 mt-1">We'll get back to you within 24 hours using the contact details provided.</p>
+                  </div>
+                </div>
+              )}
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="firstName" className="text-xs font-brand tracking-wider uppercase text-muted-foreground">First Name</Label>
@@ -183,6 +195,10 @@ export function Enquiry() {
                   "Request Free Quote"
                 )}
               </Button>
+              <p className="text-xs text-muted-foreground leading-relaxed text-center">
+                We’ll only use your details to respond to your enquiry. See our{" "}
+                <a href="/privacy-policy" className="text-[#c9a96e] hover:underline">Privacy Policy</a>.
+              </p>
             </form>
           </div>
 

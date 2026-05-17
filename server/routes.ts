@@ -110,7 +110,7 @@ export async function registerRoutes(
     const enquiry = await storage.createEnquiry(parsed.data);
 
     // Send email notification (non-blocking — don't fail if email fails)
-    sendEnquiryEmail(parsed.data).catch((err) => {
+    sendEnquiryEmail({ ...parsed.data, message: parsed.data.message ?? "" }).catch((err) => {
       console.error("Failed to send enquiry email:", err.message);
     });
 

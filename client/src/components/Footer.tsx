@@ -1,5 +1,3 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
-
 export function Footer() {
   return (
     <footer id="contact" className="bg-[#0c1222] text-white pt-24 pb-10 relative overflow-hidden">
@@ -21,20 +19,12 @@ export function Footer() {
                 <span className="font-brand font-light text-xl tracking-[0.15em] uppercase text-[#c9a96e]">Water</span>
               </div>
             </div>
-            <p className="text-white/35 max-w-sm leading-relaxed mb-8">
-              Professional window cleaning service using advanced pure water technology for streak-free, lasting results that protect and enhance your property.
+            <p className="text-white/35 max-w-sm leading-relaxed mb-4">
+              Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages.
             </p>
-            <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all text-white/60 hover:text-[#0c1222]">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all text-white/60 hover:text-[#0c1222]">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all text-white/60 hover:text-[#0c1222]">
-                <Twitter className="w-4 h-4" />
-              </a>
-            </div>
+            <p className="text-[#c9a96e] text-sm font-brand tracking-wider uppercase">
+              Fully insured • Free no-obligation quotes
+            </p>
           </div>
 
           <div>
@@ -43,7 +33,10 @@ export function Footer() {
               <li><a href="#services" className="text-white/40 hover:text-white transition-colors text-sm">Services</a></li>
               <li><a href="#enquiry" className="text-white/40 hover:text-white transition-colors text-sm">Get a Quote</a></li>
               <li><a href="#payment" className="text-white/40 hover:text-white transition-colors text-sm">Pay Bill Online</a></li>
-              <li><a href="#" className="text-white/40 hover:text-white transition-colors text-sm">Terms & Conditions</a></li>
+              <li><a href="/terms-and-conditions" className="text-white/40 hover:text-white transition-colors text-sm">Terms & Conditions</a></li>
+              <li><a href="/privacy-policy" className="text-white/40 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
+              <li><a href="/cookie-policy" className="text-white/40 hover:text-white transition-colors text-sm">Cookie Policy</a></li>
+              <li><a href="/refund-policy" className="text-white/40 hover:text-white transition-colors text-sm">Refund Policy</a></li>
             </ul>
           </div>
 

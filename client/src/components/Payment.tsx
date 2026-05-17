@@ -129,7 +129,7 @@ export function Payment() {
               <CreditCard className="w-6 h-6 text-[#c9a96e] shrink-0" />
               <div>
                 <p className="text-sm font-semibold text-foreground mb-0.5">Secure Card Payment via Stripe</p>
-                <p className="text-xs text-muted-foreground">You'll be taken to Stripe's secure checkout page to enter your card details. We never store your card information.</p>
+                <p className="text-xs text-muted-foreground">You'll be taken to Stripe's secure checkout page to enter your card details. We never store your card information. Please check your invoice reference and amount before continuing.</p>
               </div>
             </div>
 
@@ -156,6 +156,11 @@ export function Payment() {
             <p className="text-xs text-center text-muted-foreground flex items-center justify-center gap-1.5">
               <Lock className="w-3 h-3" />
               Payments are processed securely by Stripe with 256-bit encryption.
+            </p>
+            <p className="text-xs text-center text-muted-foreground leading-relaxed">
+              By paying online, you confirm the invoice details are correct and agree to the{" "}
+              <a href="/terms-and-conditions" className="text-[#c9a96e] hover:underline">Terms & Conditions</a>{" "}
+              and <a href="/refund-policy" className="text-[#c9a96e] hover:underline">Refund Policy</a>.
             </p>
           </form>
         </div>
