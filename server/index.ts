@@ -2,9 +2,6 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-import { WebhookHandlers } from "./webhookHandlers";
-import { getStripeSync } from "./stripeClient";
-import { runMigrations } from "stripe-replit-sync";
 
 const app = express();
 const httpServer = createServer(app);
@@ -15,26 +12,6 @@ declare module "http" {
   }
 }
 
-// Register Stripe webhook BEFORE express.json() — it needs the raw Buffer
-app.post(
-  "/api/stripe/webhook",
-  express.raw({ type: "application/json" }),
-  async (req, res) => {
-    const signature = req.headers["stripe-signature"];
-    if (!signature) {
-      return res.status(400).json({ error: "Missing stripe-signature" });
-    }
-    try {
-      const sig = Array.isArray(signature) ? signature[0] : signature;
-      await WebhookHandlers.processWebhook(req.body as Buffer, sig);
-      res.status(200).json({ received: true });
-    } catch (error: any) {
-      console.error("Webhook error:", error.message);
-      res.status(400).json({ error: "Webhook processing error" });
-    }
-  }
-);
-
 app.use(
   express.json({
     verify: (req, _res, buf) => {
@@ -44,6 +21,27 @@ app.use(
 );
 
 app.use(express.urlencoded({ extended: false }));
+
+const CANONICAL_HOST = "www.purewaterinfo.co.uk";
+
+function shouldRedirectToCanonicalHost(host: string | undefined) {
+  if (process.env.NODE_ENV !== "production" || !host) return false;
+
+  const hostname = host.split(":")[0].toLowerCase();
+  return (
+    hostname.endsWith(".replit.app") ||
+    hostname.endsWith(".replit.dev") ||
+    hostname === "purewaterinfo.co.uk"
+  );
+}
+
+app.use((req, res, next) => {
+  if (!shouldRedirectToCanonicalHost(req.headers.host)) {
+    return next();
+  }
+
+  return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`);
+});
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -82,32 +80,7 @@ app.use((req, res, next) => {
   next();
 });
 
-async function initStripe() {
-  const databaseUrl = process.env.DATABASE_URL;
-  if (!databaseUrl) {
-    console.warn("DATABASE_URL not set — skipping Stripe init");
-    return;
-  }
-  try {
-    log("Initialising Stripe schema...", "stripe");
-    await runMigrations({ databaseUrl });
-    log("Stripe schema ready", "stripe");
-
-    const stripeSync = await getStripeSync();
-    const webhookBaseUrl = `https://${process.env.REPLIT_DOMAINS?.split(",")[0]}`;
-    await stripeSync.findOrCreateManagedWebhook(`${webhookBaseUrl}/api/stripe/webhook`);
-    log("Webhook configured", "stripe");
-
-    stripeSync.syncBackfill()
-      .then(() => log("Stripe data synced", "stripe"))
-      .catch((err: any) => console.error("Stripe sync error:", err));
-  } catch (error) {
-    console.error("Failed to initialise Stripe:", error);
-  }
-}
-
 (async () => {
-  await initStripe();
   await registerRoutes(httpServer, app);
 
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
