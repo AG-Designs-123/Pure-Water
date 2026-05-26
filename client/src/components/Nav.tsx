@@ -28,11 +28,12 @@ export function Nav() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-services">Services</a>
-            <a href="#enquiry" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-enquiry">Quote</a>
-            <a href="#payment" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-payment">Pay Bill</a>
+            <a href="/#services" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-services">Services</a>
+            <a href="/#areas" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-areas">Areas</a>
+            <a href="/#enquiry" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-enquiry">Quote</a>
+            <a href="/#payment" className={`text-sm font-medium tracking-wider uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-[#1a2340]" : "text-white/70 hover:text-white"}`} data-testid="link-payment">Pay Bill</a>
             <Button asChild size="sm" className="rounded-none px-6 bg-[#c9a96e] text-[#0c1222] hover:bg-[#d4b87d] border-none tracking-wider uppercase font-brand text-xs">
-              <a href="#contact" data-testid="button-contact-nav">Contact Us</a>
+              <a href="/#contact" data-testid="button-contact-nav">Contact Us</a>
             </Button>
           </div>
 
@@ -51,11 +52,12 @@ export function Nav() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-border animate-in slide-in-from-top-2">
           <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">
-            <a href="#services" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Services</a>
-            <a href="#enquiry" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Quote</a>
-            <a href="#payment" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Pay Bill</a>
+            <a href="/#services" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Services</a>
+            <a href="/#areas" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Areas</a>
+            <a href="/#enquiry" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Quote</a>
+            <a href="/#payment" onClick={() => setIsOpen(false)} className="block text-base font-medium text-foreground hover:text-[#c9a96e] tracking-wider uppercase">Pay Bill</a>
             <Button asChild className="w-full justify-center mt-4 bg-[#c9a96e] text-[#0c1222] hover:bg-[#d4b87d] rounded-none tracking-wider uppercase font-brand" size="lg">
-              <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
+              <a href="/#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
             </Button>
           </div>
         </div>

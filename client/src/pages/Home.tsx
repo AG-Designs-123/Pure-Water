@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
+import { AreasWeCover } from "@/components/AreasWeCover";
 import { TrustBar } from "@/components/TrustBar";
 import { Enquiry } from "@/components/Enquiry";
 import { Payment } from "@/components/Payment";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <Services />
+      <AreasWeCover />
       <Enquiry />
       <Payment />
       <Footer />

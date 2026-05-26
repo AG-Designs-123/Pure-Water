@@ -30,9 +30,10 @@ export function Footer() {
           <div>
             <h4 className="font-display font-bold text-lg text-white/80 mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              <li><a href="#services" className="text-white/40 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="#enquiry" className="text-white/40 hover:text-white transition-colors text-sm">Get a Quote</a></li>
-              <li><a href="#payment" className="text-white/40 hover:text-white transition-colors text-sm">Pay Bill Online</a></li>
+              <li><a href="/#services" className="text-white/40 hover:text-white transition-colors text-sm">Services</a></li>
+              <li><a href="/#areas" className="text-white/40 hover:text-white transition-colors text-sm">Areas We Cover</a></li>
+              <li><a href="/#enquiry" className="text-white/40 hover:text-white transition-colors text-sm">Get a Quote</a></li>
+              <li><a href="/#payment" className="text-white/40 hover:text-white transition-colors text-sm">Pay Bill Online</a></li>
               <li><a href="/terms-and-conditions" className="text-white/40 hover:text-white transition-colors text-sm">Terms & Conditions</a></li>
               <li><a href="/privacy-policy" className="text-white/40 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
               <li><a href="/cookie-policy" className="text-white/40 hover:text-white transition-colors text-sm">Cookie Policy</a></li>

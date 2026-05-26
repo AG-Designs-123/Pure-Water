@@ -1,5 +1,6 @@
 import { Card, CardContent } from "./ui/card";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 const services = [
   {
@@ -7,28 +8,32 @@ const services = [
     title: "Window Cleaning",
     description: "Spotless, streak-free windows using advanced pure water pole systems reaching up to 6 stories safely from the ground.",
     features: ["Frames & sills included", "Lasts longer than traditional methods", "Eco-friendly, no harsh chemicals"],
-    image: "/images/window-cleaning.png"
+    image: "/images/window-cleaning.png",
+    href: "/window-cleaning-blandford-forum"
   },
   {
     id: "gutters",
     title: "Gutter Clearing",
     description: "Prevent water damage to your property with our thorough gutter clearing service, removing moss, leaves, and debris.",
     features: ["High-reach vacuum system", "Before/after inspection", "Fascia & soffit washing available"],
-    image: "/images/gutter-cleaning.png"
+    image: "/images/gutter-cleaning.png",
+    href: "/gutter-cleaning-blandford-forum"
   },
   {
     id: "solar",
     title: "Solar Panel Cleaning",
     description: "Maximize your energy efficiency by keeping your solar panels free from dust, dirt, and bird droppings.",
     features: ["Increases energy yield up to 30%", "Gentle pure water wash", "Safe non-abrasive process"],
-    image: "/images/solar-cleaning.png"
+    image: "/images/solar-cleaning.png",
+    href: "/solar-panel-cleaning-dorset"
   },
   {
     id: "conservatory",
     title: "Conservatory Valets",
     description: "Bring your conservatory back to life. We clean roofs, finials, frames, and glass to a brilliant shine.",
     features: ["Algae & moss removal", "Restores original brightness", "Full exterior valet"],
-    image: "/images/conservatory-cleaning.png"
+    image: "/images/conservatory-cleaning.png",
+    href: "/conservatory-cleaning-dorset"
   }
 ];
 
@@ -76,6 +81,10 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
+                <Link href={service.href} className="inline-flex items-center mt-6 text-sm font-brand tracking-wider uppercase text-[#0c1222] hover:text-[#c9a96e] transition-colors">
+                  Learn more locally
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </CardContent>
             </Card>
           ))}
