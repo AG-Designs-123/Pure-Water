@@ -32,7 +32,7 @@ export function Hero() {
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#c9a96e] to-transparent my-8 animate-in slide-in-from-left-12 duration-1000" />
           
           <p className="text-lg text-white/50 max-w-md mb-10 leading-relaxed animate-in slide-in-from-left-12 duration-1000">
-            Professional pure water window cleaning across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne and surrounding Dorset villages.
+            Providing professional pure water window cleaning services directly to homes and businesses across Blandford Forum, Spetisbury, Charlton Marshall, Wimborne, and all surrounding Dorset villages.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-left-14 duration-1000 delay-150">
@@ -54,7 +54,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#c9a96e]/10 via-transparent to-transparent rounded-full blur-3xl opacity-30" />
           <img 
             src="/images/figure.png?v=2" 
-            alt="Pure Water Window Cleaning" 
+            alt="Pure Water Window Cleaning Logo" 
             className="h-[75vh] max-h-[700px] object-contain drop-shadow-[0_0_60px_rgba(201,169,110,0.15)] animate-in slide-in-from-bottom-16 duration-1000 relative z-10"
             style={{ filter: "brightness(0) invert(1) opacity(0.85)" }}
             data-testid="hero-logo"
