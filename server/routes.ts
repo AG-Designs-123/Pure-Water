@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { insertEnquirySchema } from "@shared/schema";
 import { fromError } from "zod-validation-error";
 import nodemailer from "nodemailer";
+import { requireAdmin } from "./auth";
 
 function getEmailTransporter() {
   const password = process.env.EMAIL_PASSWORD;
@@ -116,7 +117,7 @@ export async function registerRoutes(
     return res.status(201).json(enquiry);
   });
 
-  app.get("/api/enquiries", async (_req, res) => {
+  app.get("/api/enquiries", requireAdmin, async (_req, res) => {
     const enquiries = await storage.getEnquiries();
     return res.json(enquiries);
   });
